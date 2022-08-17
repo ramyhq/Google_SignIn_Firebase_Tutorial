@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:jitsi_meet/jitsi_meet.dart';
 
 import '../config/jitsi_meet_methods.dart';
+import '../firebase/auth.dart';
 import '../witgets/meeting_buttons_option.dart';
 
 class VideoCallScreen extends StatefulWidget {
@@ -14,7 +15,7 @@ class VideoCallScreen extends StatefulWidget {
 }
 
 class _VideoCallScreenState extends State<VideoCallScreen> {
-
+  final AuthMethods _authMethods = AuthMethods();
   late TextEditingController meetingIdController;
   late TextEditingController nameController;
   final JitsiMeetMethods _jitsiMeetMethods = JitsiMeetMethods();
@@ -25,7 +26,7 @@ class _VideoCallScreenState extends State<VideoCallScreen> {
   void initState() {
     meetingIdController = TextEditingController();
     nameController = TextEditingController(
-      text: username,
+      text: _authMethods.user.displayName,
     );
     super.initState();
   }

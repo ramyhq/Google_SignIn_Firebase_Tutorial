@@ -2,6 +2,9 @@
 import 'package:flutter/material.dart';
 import 'package:zoom_colne_with_jitsi/screens/meeting_creen.dart';
 
+import '../firebase/auth.dart';
+import 'history_meeting_screen.dart';
+
 class HomeScreen extends StatefulWidget {
   static const String id = 'HomeScreen';
    HomeScreen({Key? key}) : super(key: key);
@@ -21,12 +24,13 @@ class _HomeScreenState extends State<HomeScreen> {
 
   List<Widget> pages = [
     MeetingScreen(),
-    //const HistoryMeetingScreen(),
-    const Text('Contacts'),
+    const HistoryMeetingScreen(),
     const Text('Contacts'),
     TextButton(
       child: const Text('Log Out'),
-      onPressed: () {},
+      onPressed: () {
+        AuthMethods().signOut();
+      },
     ),
   ];
 

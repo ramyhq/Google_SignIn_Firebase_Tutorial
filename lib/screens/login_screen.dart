@@ -3,11 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_signin_button/button_list.dart';
 import 'package:flutter_signin_button/button_view.dart';
 
+import '../firebase/auth.dart';
 import 'home_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   static const String id = 'LoginScreen';
-  const LoginScreen({Key? key}) : super(key: key);
+   LoginScreen({Key? key}) : super(key: key);
+  final AuthMethods _authMethods = AuthMethods();
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +34,10 @@ class LoginScreen extends StatelessWidget {
               SignInButton(
                 Buttons.Google,
                 onPressed: () async {
-                  Navigator.of(context).pushNamed(HomeScreen.id);
+                  bool result = await _authMethods.signInWithGoogle();
+                    if(result){
+                   Navigator.of(context).pushNamed(HomeScreen.id);
+                    }
                 },
               ),
             ],

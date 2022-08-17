@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "185042737770",
+    "project_id": "zoomcolne2",
+    "storage_bucket": "zoomcolne2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:185042737770:android:54fb72920bfc6bfcf14813",
+        "android_client_info": {
+          "package_name": "com.example.zoom_colne_with_jitsi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "185042737770-7b64eio7uvj2jt5afq00idla180is7rv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.zoom_colne_with_jitsi",
+            "certificate_hash": "20c534f4fd50568bfe9575d23c6f77f09757b031"
+          }
+        },
+        {
+          "client_id": "185042737770-0jaaqovu76jvvu7k2jesj7em58tdr7dd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRgxIGBtdWYMGp8IymIhQHz4liymY1Fe4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "185042737770-0jaaqovu76jvvu7k2jesj7em58tdr7dd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
