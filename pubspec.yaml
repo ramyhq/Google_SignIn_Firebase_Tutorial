@@ -38,6 +38,7 @@ dependencies:
   jitsi_meet: ^4.0.0
 
   firebase_core: ^1.20.1
+  firebase_crashlytics: ^2.8.8
   firebase_auth: ^3.6.3
   firebase_storage: ^10.3.5
   cloud_firestore: ^3.4.4
